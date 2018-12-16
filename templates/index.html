@@ -21,17 +21,20 @@
 
   <span class="navbar-text"> Built by
       <a href="https://www.linkedin.com/in/kelseyterrel">Kelsey</a><a> & </a><a href="https://www.linkedin.com/in/daniel-ruales/">Daniel</a>
-
-
   </span>
 </header>
-
 </body>
+
 <body>
-  <p><img width="50%" src="{{gg_data}}"></p>
+  <p>
+  {% for items in gg_data2["dog_breed_table"] %}
+    <br>{{ items }}
+  {% endfor %}
+  </p>
+  <p><img width="50%" src="{{gg_data2["render_dir"]}}"></p>
 </body>
 </html>
-         
-  
+
+
 
 {% endblock body %}

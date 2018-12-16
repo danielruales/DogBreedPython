@@ -1,0 +1,10 @@
+# Python
+*.pyc
+*/__pycache__/
+
+### macOS template
+# General
+*.DS_Store
+
+
+static/*
