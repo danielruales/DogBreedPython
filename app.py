@@ -1,12 +1,8 @@
 from flask import Flask, render_template, request
-from data import displayData
-from randomizer import Randomize
-from random import randint
 import requests
 import os
 
 app = Flask(__name__)
-count_list = []
 
 UPLOAD_FOLDER = "/Users/danielruales/Documents/aaaProjects/test/"
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
