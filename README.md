@@ -1,13 +1,10 @@
-# Unity Web Application
-The goal of this project was to create a web application that would showcase the projects from the Made With Unity showcase.
-I chose to build a Python based application using Flask. It tracks the user's GET requests so that each project is visited before repeating projects, and uses web scrapping to gather the data on specific projects.
-<br>
-All data was obtained from: https://unity.com/madewith
+# Dog Breed Predictor
+Predicts dog breed.
 
 ## Getting Started
 
 Download the source code into a folder. Jump to the Prerequisites below to ensure the necessary installations are complete.
-Once they are complete, continue to Deployment. 
+Once they are complete, continue to Deployment.
 
 ### Prerequisites
 
@@ -54,4 +51,3 @@ python app.py
 * [Flask](http://flask.pocoo.org/) - Web framework
 * [Sublime Text](https://www.sublimetext.com/) - Text editor
 * [BootstrapCDN](https://www.bootstrapcdn.com/) - Used to load CSS
-
