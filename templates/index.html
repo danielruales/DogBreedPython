@@ -1,8 +1,11 @@
+{% extends 'layout.html' %}
+
+{% block body %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Python and Flask</title>
+  <title>Dog Breed Calculator</title>
   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/app.css') }}">
 </head>
 
@@ -12,11 +15,22 @@
       <span class="btn btn-default btn-file">
         Browse <input type="file" name="image">
       </span>
+
     <input type="submit" value="Upload your image" class="btn btn-primary">
   </form>
+
+  <span class="navbar-text"> Built by
+      <a href="https://www.linkedin.com/in/kelseyterrel">Kelsey</a><a href="https://www.linkedin.com/in/daniel-ruales/"> & Daniel</a>
+
+
+  </span>
 </header>
+
 </body>
 <body>
-  <p><img width="50%" src="/static/test.jpeg"></p>
+  <p><img width="50%" src="{{gg_data}}"></p>
 </body>
 </html>
+        
+
+{% endblock body %}
