@@ -6,7 +6,8 @@ import urllib3
 
 app = Flask(__name__)
 
-UPLOAD_FOLDER = "/Users/danielruales/Documents/aaaProjects/DogBreedPython/static/"
+#UPLOAD_FOLDER = "/Users/danielruales/Documents/aaaProjects/DogBreedPython/static/"
+UPLOAD_FOLDER = os.getcwd() + "/static/"
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route('/')
@@ -26,16 +27,12 @@ def upload_file():
 	#print(UPLOAD_FOLDER)
 	#print(app.config['UPLOAD_FOLDER'])
 	file = request.files['image']
-	print(file)
 	f = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
     # add your custom code to check that the uploaded file is a valid image and not a malicious file (out-of-scope for this post)
 	#f = "/Users/danielruales/Documents/aaaProjects/test/" + file
 	file.save(f)
-	print(file)
-	test = UPLOAD_FOLDER + "test.jpeg"
-	full_filename = os.path.join(app.config['UPLOAD_FOLDER'], 'test.jpeg')
-	print(full_filename)
-	return render_template('index.html', gg_data = full_filename)
+	render_dir = "/static/" + str(file.filename)
+	return render_template('index.html', gg_data = render_dir)
 
 if __name__ == '__main__':
 	app.debug = True
